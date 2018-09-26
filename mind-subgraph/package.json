@@ -1,0 +1,17 @@
+{
+  "name": "mind-subgraph",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "codegen": "graph generate-types subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "build-ipfs": "graph build --ipfs /ip4/127.0.0.1/tcp/5001 subgraph.yaml"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.2.5"
+  }
+}

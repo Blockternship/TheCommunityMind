@@ -1,0 +1,5 @@
+type Question @entity {
+    id: Bytes!
+    questioner: Bytes!
+    question: String!
+}
