@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AskQuestion from './AskQuestion';
-import QuestionList from './QuestionList';
+import QuestionListContainer from './QuestionList/QuestionListContainer';
 import './App.css';
 
 class App extends Component {
@@ -10,10 +10,7 @@ class App extends Component {
         drizzle={this.props.drizzle}
         drizzleState={this.props.drizzleState}
       />
-      <QuestionList
-        drizzle={this.props.drizzle}
-        drizzleState={this.props.drizzleState}
-      />
+      <QuestionListContainer/>
     </div>;
   }
 }
