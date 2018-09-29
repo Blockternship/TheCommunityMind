@@ -36,8 +36,9 @@ const drizzle = new Drizzle(options, drizzleStore);
 // pass in the drizzle instance
 ReactDOM.render(
   <DrizzleContext.Provider drizzle={drizzle} >
-    <ApolloProvider client={client}/>
-    <AppContainer />
+    <ApolloProvider client={client}>
+      <AppContainer />
+    </ApolloProvider>
   </DrizzleContext.Provider>
   , document.getElementById("root"));
 registerServiceWorker();

@@ -1,8 +1,11 @@
 specVersion: 0.0.1
 schema:
   file: ./schema.graphql
+dataSources:
+- kind: ethereum/contract
+  name: TheMind
   source:
-    address: "20479bf8035c5d7e64b5ae469905ea2fcfe345ba"
+    address: "e1019992d273ad8c1d25c8ed001a8649114597df"
     abi: TheMind
   mapping:
     kind: ethereum/events
