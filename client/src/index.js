@@ -7,7 +7,9 @@ import registerServiceWorker from "./registerServiceWorker";
 // import drizzle functions and contract artifact
 import { Drizzle, generateStore } from "drizzle";
 import { DrizzleContext } from "drizzle-react";
+import { ApolloProvider } from "react-apollo";
 import TheMind from "./contracts/TheMind.json";
+import client from "./apollo-client";
 
 // let drizzle know what contracts we want
 const options = {
@@ -34,6 +36,7 @@ const drizzle = new Drizzle(options, drizzleStore);
 // pass in the drizzle instance
 ReactDOM.render(
   <DrizzleContext.Provider drizzle={drizzle} >
+    <ApolloProvider client={client}/>
     <AppContainer />
   </DrizzleContext.Provider>
   , document.getElementById("root"));
